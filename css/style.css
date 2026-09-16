@@ -669,11 +669,11 @@ button { cursor: pointer; font-family: inherit; }
   inset: 0;
   border-radius: 12px;
   background:
-    /* Tiny corner vertex tips only (18px) */
-    radial-gradient(circle 18px at 0% 0%, #0a0a0a 40%, transparent 100%),
-    radial-gradient(circle 18px at 100% 0%, #0a0a0a 40%, transparent 100%),
-    radial-gradient(circle 16px at 0% 100%, #0a0a0a 40%, transparent 100%),
-    radial-gradient(circle 16px at 100% 100%, #0a0a0a 40%, transparent 100%),
+    /* Corner vertex darkening — darker and slightly wider */
+    radial-gradient(circle 42px at 0% 0%, #0a0a0a 60%, transparent 100%),
+    radial-gradient(circle 42px at 100% 0%, #0a0a0a 60%, transparent 100%),
+    radial-gradient(circle 36px at 0% 100%, #0a0a0a 55%, transparent 100%),
+    radial-gradient(circle 36px at 100% 100%, #0a0a0a 55%, transparent 100%),
     /* Original clean radial blend from before */
     radial-gradient(
       ellipse 75% 76% at 50% 36%,
