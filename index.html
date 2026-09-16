@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Anikethana Reddy J L — Full-Stack Engineer, Distributed Systems Architect & GenAI Pioneer from Bengaluru. Creator of One Swagger, rPrep, Shortly. SDE Intern @ My Startup Wave." />
+  <meta name="keywords" content="Anikethana Reddy, Full-Stack Engineer, GenAI, Distributed Systems, Kafka, React, FastAPI, Portfolio, Bengaluru" />
+  <meta name="author" content="Anikethana Reddy J L" />
+  <meta property="og:title" content="Anikethana Reddy | Full-Stack Engineer & GenAI Architect" />
+  <meta property="og:description" content="Engineering scalable distributed systems & autonomous AI architectures." />
+  <meta property="og:type" content="website" />
+  <title>Anikethana Reddy | Engineer &amp; GenAI Architect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/terminal.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- MATRIX CANVAS BACKGROUND -->
+  <canvas id="matrix-canvas" aria-hidden="true"></canvas>
+
+  <!-- NOISE OVERLAY -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" id="nav-logo-link">
+        <span class="nav-logo-bracket">[</span>
+        <span class="nav-logo-text">ANIKETHANA</span>
+        <span class="nav-logo-bracket">]</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link" data-section="about">WHOAMI</a></li>
+        <li><a href="#terminal" class="nav-link" data-section="terminal">TERMINAL</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">PROJECTS</a></li>
+        <li><a href="#arsenal" class="nav-link" data-section="arsenal">ARSENAL</a></li>
+        <li><a href="#experience" class="nav-link" data-section="experience">TIMELINE</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">UPLINK</a></li>
+      </ul>
+      <div class="nav-status">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span class="status-text">ONLINE // BENGALURU_NODE</span>
+      </div>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section id="hero" class="hero-section" aria-label="Hero introduction">
+    <div class="hero-inner">
+      <div class="hero-pretext">
+        <span class="hero-prompt">root@bengaluru:~$</span>
+        <span class="hero-cmd typing-text" id="hero-cmd">cat profile.json</span>
+        <span class="cursor-blink" aria-hidden="true"></span>
+      </div>
+      <h1 class="hero-name">
+        <span class="hero-name-first">ANIKETHANA</span>
+        <br />
+        <span class="hero-name-last glow-text">REDDY J L</span>
+      </h1>
+      <p class="hero-tagline">
+        <span class="typewriter-text" id="hero-typewriter" aria-live="polite"></span>
+      </p>
+      <p class="hero-directive">
+        Engineering scalable distributed systems &amp; autonomous AI architectures ⚡
+      </p>
+      <div class="hero-badges">
+        <span class="hero-badge">SDE Intern @ My Startup Wave</span>
+        <span class="hero-badge">Creator of One Swagger</span>
+        <span class="hero-badge">SRIJAN 2026 National Finalist</span>
+      </div>
+      <div class="hero-ctas">
+        <a href="#terminal" class="btn btn-primary" id="hero-terminal-btn">
+          <span class="btn-icon">&gt;_</span> Launch Terminal
+        </a>
+        <a href="#projects" class="btn btn-secondary">View Projects</a>
+        <a href="#contact" class="btn btn-ghost">Establish Uplink</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span class="scroll-line"></span>
+      <span class="scroll-label">SCROLL</span>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT / WHOAMI
+  ============================================================ -->
+  <section id="about" class="section" aria-label="About">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">&gt; 01</span>
+        <h2 class="section-title">// WHOAMI</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-code-card glass-card">
+          <div class="code-header">
+            <span class="code-dot red"></span>
+            <span class="code-dot yellow"></span>
+            <span class="code-dot green"></span>
+            <span class="code-filename">profile.ts</span>
+          </div>
+          <pre class="code-block"><code><span class="kw">const</span> <span class="var">aniketh</span> <span class="op">=</span> {
+  <span class="key">identity</span>: <span class="str">"Anikethana Reddy J L"</span>,
+  <span class="key">location</span>: <span class="str">"Bengaluru, India"</span>,
+  <span class="key">role</span>: <span class="str">"SDE Intern @ My Startup Wave"</span>,
+  <span class="key">designations</span>: [
+    <span class="str">"Distributed Systems Engineer"</span>,
+    <span class="str">"GenAI Architect"</span>,
+    <span class="str">"DevTools Creator"</span>,
+    <span class="str">"UI/UX Engineer"</span>
+  ],
+  <span class="key">directive</span>: <span class="str">"Engineer scalable distributed
+    systems &amp; autonomous AI architectures ⚡"</span>
+};</code></pre>
+        </div>
+        <div class="about-text">
+          <p class="about-intro">Full-Stack Engineer from Bengaluru who builds systems that <span class="highlight">scale under pressure</span> and <span class="highlight">interfaces humans love</span>.</p>
+          <ul class="about-bullets">
+            <li>⚡ Architecting <strong>event-driven microservices</strong> with Apache Kafka, Redis, FastAPI &amp; Docker/K8s</li>
+            <li>🤖 Building <strong>GenAI co-pilots</strong> and multi-agent pipelines with Gemini 2.0 Flash &amp; LangGraph</li>
+            <li>🛠️ Creator of <strong>One Swagger</strong> — live on VS Code Marketplace &amp; Chrome Web Store</li>
+            <li>🎨 AI-assisted <strong>UI/UX design</strong> with Figma component systems &amp; Google Stitch</li>
+            <li>📚 Author of <strong>NeetCode 150 Master Guide</strong> — 150-problem DSA curriculum</li>
+            <li>🏆 <strong>National Finalist</strong> @ SRIJAN 2026 | Smart India Hackathon contributor</li>
+          </ul>
+          <div class="about-connect">
+            <a href="mailto:anikethana2109@gmail.com" class="about-link">anikethana2109@gmail.com</a>
+            <a href="https://www.linkedin.com/in/anikethana-reddy-j-l-8716ab296/" target="_blank" rel="noopener" class="about-link">LinkedIn</a>
+            <a href="https://github.com/anikethana21" target="_blank" rel="noopener" class="about-link">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       INTERACTIVE TERMINAL
+  ============================================================ -->
+  <section id="terminal" class="section section-dark" aria-label="Interactive terminal">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">&gt; 02</span>
+        <h2 class="section-title">// INTERACTIVE_TERMINAL</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="terminal-wrapper glass-card" role="application" aria-label="Interactive CLI terminal">
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <span class="tdot red"></span>
+            <span class="tdot yellow"></span>
+            <span class="tdot green"></span>
+          </div>
+          <span class="terminal-title">aniketh@portfolio — bash</span>
+          <div class="terminal-hint">Try: <code>help</code></div>
+        </div>
+        <div class="terminal-body" id="terminal-body" aria-live="polite" aria-atomic="false">
+          <div class="terminal-output" id="terminal-output">
+            <div class="t-line t-welcome">Welcome to Aniketh's Portfolio Terminal v1.0.0</div>
+            <div class="t-line t-info">Type <span class="t-cmd-hint">help</span> to see available commands.</div>
+            <div class="t-line">&nbsp;</div>
+          </div>
+          <div class="terminal-input-row">
+            <span class="t-prompt">aniketh@portfolio:~$&nbsp;</span>
+            <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" aria-label="Terminal command input" placeholder="type a command..." />
+          </div>
+        </div>
+        <div class="terminal-quick-btns" role="group" aria-label="Quick terminal commands">
+          <button class="t-quick-btn" data-cmd="help">help</button>
+          <button class="t-quick-btn" data-cmd="whoami">whoami</button>
+          <button class="t-quick-btn" data-cmd="skills">skills</button>
+          <button class="t-quick-btn" data-cmd="projects">projects</button>
+          <button class="t-quick-btn" data-cmd="contact">contact</button>
+          <button class="t-quick-btn" data-cmd="clear">clear</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FEATURED PROJECTS
+  ============================================================ -->
+  <section id="projects" class="section" aria-label="Featured projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">&gt; 03</span>
+        <h2 class="section-title">// FEATURED_PROJECTS</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="projects-grid" id="projects-grid">
+
+        <!-- ONE SWAGGER -->
+        <article class="project-card glass-card" data-project="one-swagger">
+          <div class="project-card-header">
+            <span class="project-number">01</span>
+            <div class="project-links">
+              <a href="https://github.com/anikethana21/one-swagger" target="_blank" rel="noopener" class="project-link-icon" aria-label="GitHub repository">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              </a>
+              <a href="https://marketplace.visualstudio.com/" target="_blank" rel="noopener" class="project-link-icon" aria-label="Live demo">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">&gt; ONE SWAGGER</h3>
+          <p class="project-desc">Universal OpenAPI testing tool with <strong>zero-CORS proxy</strong> architecture. Deployed live across Web App, Chrome Extension &amp; VS Code Marketplace.</p>
+          <div class="project-tags">
+            <span class="tag">React 19</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Manifest V3</span>
+          </div>
+        </article>
+
+        <!-- RPREP -->
+        <article class="project-card glass-card featured" data-project="rprep">
+          <div class="project-card-header">
+            <span class="project-number">02</span>
+            <span class="project-featured-badge">LIVE</span>
+            <div class="project-links">
+              <a href="https://github.com/anikethana21/rprep" target="_blank" rel="noopener" class="project-link-icon" aria-label="GitHub"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+              <a href="https://rprep-ai.vercel.app" target="_blank" rel="noopener" class="project-link-icon" aria-label="Live demo"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg></a>
+            </div>
+          </div>
+          <h3 class="project-title">&gt; RPREP AI</h3>
+          <p class="project-desc">Intelligent GenAI career co-pilot — predictive Q&amp;As, adaptive learning pathways &amp; ATS resume compiler powered by <strong>Gemini 2.0 Flash</strong>.</p>
+          <div class="project-tags">
+            <span class="tag">Gemini 2.0</span>
+            <span class="tag">React 19</span>
+            <span class="tag">Express 5</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">Puppeteer</span>
+          </div>
+        </article>
+
+        <!-- SHORTLY -->
+        <article class="project-card glass-card featured" data-project="shortly">
+          <div class="project-card-header">
+            <span class="project-number">03</span>
+            <span class="project-featured-badge">LIVE</span>
+            <div class="project-links">
+              <a href="https://github.com/anikethana21/shortly" target="_blank" rel="noopener" class="project-link-icon" aria-label="GitHub"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+              <a href="https://shortly-frontend-h639.onrender.com" target="_blank" rel="noopener" class="project-link-icon" aria-label="Live demo"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg></a>
+            </div>
+          </div>
+          <h3 class="project-title">&gt; SHORTLY PLATFORM</h3>
+          <p class="project-desc">Production-grade <strong>event-driven microservices</strong> URL shortener — async Kafka workers, sliding-window Redis rate limiting, live API docs.</p>
+          <div class="project-tags">
+            <span class="tag">FastAPI</span>
+            <span class="tag">Redpanda Kafka</span>
+            <span class="tag">Upstash Redis</span>
+            <span class="tag">Next.js 14</span>
+            <span class="tag">MongoDB</span>
+          </div>
+        </article>
+
+        <!-- ILAP -->
+        <article class="project-card glass-card" data-project="ilap">
+          <div class="project-card-header">
+            <span class="project-number">04</span>
+            <span class="project-featured-badge award">🏆 FINALIST</span>
+            <div class="project-links">
+              <a href="https://github.com/anikethana21" target="_blank" rel="noopener" class="project-link-icon" aria-label="GitHub"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+            </div>
+          </div>
+          <h3 class="project-title">&gt; ILAP AUTOMATION</h3>
+          <p class="project-desc">Automated Joiner-Mover-Leaver platform with <strong>conversational RBAC</strong>. SRIJAN 2026 National Finalist · Smart India Hackathon contributor.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">IAM</span>
+            <span class="tag">Security</span>
+            <span class="tag">SOC2</span>
+          </div>
+        </article>
+
+        <!-- RAG MULTI-AGENT -->
+        <article class="project-card glass-card" data-project="rag">
+          <div class="project-card-header">
+            <span class="project-number">05</span>
+            <div class="project-links">
+              <a href="https://github.com/anikethana21/rag-multi-agent1" target="_blank" rel="noopener" class="project-link-icon" aria-label="GitHub"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+            </div>
+          </div>
+          <h3 class="project-title">&gt; RAG MULTI-AGENT</h3>
+          <p class="project-desc">Autonomous multi-agent intelligence pipeline for real-time deep research — two-step search &amp; synthesis with <strong>Tavily Web Search</strong> &amp; Mistral LLM.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">LangGraph</span>
+            <span class="tag">Mistral AI</span>
+            <span class="tag">Streamlit</span>
+          </div>
+        </article>
+
+        <!-- NEETCODE 150 -->
+        <article class="project-card glass-card" data-project="neetcode">
+          <div class="project-card-header">
+            <span class="project-number">06</span>
+            <div class="project-links">
+              <a href="https://github.com/anikethana21/NeetCode150_Master_Guide" target="_blank" rel="noopener" class="project-link-icon" aria-label="GitHub"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+            </div>
+          </div>
+          <h3 class="project-title">&gt; NEETCODE 150 GUIDE</h3>
+          <p class="project-desc">Complete 150-problem DSA curriculum with intuition mental models &amp; progressive hints. Features an <strong>interactive web document</strong> with search &amp; dark/light theme.</p>
+          <div class="project-tags">
+            <span class="tag">Python 3</span>
+            <span class="tag">Algorithms</span>
+            <span class="tag">HTML5</span>
+            <span class="tag">150 Patterns</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TECH ARSENAL
+  ============================================================ -->
+  <section id="arsenal" class="section section-dark" aria-label="Tech arsenal">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">&gt; 04</span>
+        <h2 class="section-title">// TECH_ARSENAL</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="arsenal-filter-tabs" role="tablist" aria-label="Filter tech stack">
+        <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="filter-tab" data-filter="fullstack" role="tab" aria-selected="false">Frontend &amp; Full-Stack</button>
+        <button class="filter-tab" data-filter="distributed" role="tab" aria-selected="false">Distributed Systems</button>
+        <button class="filter-tab" data-filter="ai" role="tab" aria-selected="false">GenAI &amp; LLMs</button>
+        <button class="filter-tab" data-filter="devops" role="tab" aria-selected="false">DevOps &amp; Cloud</button>
+        <button class="filter-tab" data-filter="design" role="tab" aria-selected="false">UI/UX Design</button>
+      </div>
+      <div class="arsenal-grid" id="arsenal-grid">
+        <div class="arsenal-item" data-category="fullstack"><img src="https://skillicons.dev/icons?i=nextjs" width="44" height="44" alt="Next.js" /><span>Next.js</span></div>
+        <div class="arsenal-item" data-category="fullstack"><img src="https://skillicons.dev/icons?i=react" width="44" height="44" alt="React" /><span>React 19</span></div>
+        <div class="arsenal-item" data-category="fullstack"><img src="https://skillicons.dev/icons?i=ts" width="44" height="44" alt="TypeScript" /><span>TypeScript</span></div>
+        <div class="arsenal-item" data-category="fullstack"><img src="https://skillicons.dev/icons?i=js" width="44" height="44" alt="JavaScript" /><span>JavaScript</span></div>
+        <div class="arsenal-item" data-category="fullstack"><img src="https://skillicons.dev/icons?i=python" width="44" height="44" alt="Python" /><span>Python</span></div>
+        <div class="arsenal-item" data-category="fullstack"><img src="https://skillicons.dev/icons?i=tailwind" width="44" height="44" alt="Tailwind" /><span>Tailwind</span></div>
+        <div class="arsenal-item" data-category="fullstack"><img src="https://skillicons.dev/icons?i=fastapi" width="44" height="44" alt="FastAPI" /><span>FastAPI</span></div>
+        <div class="arsenal-item" data-category="fullstack"><img src="https://skillicons.dev/icons?i=nodejs" width="44" height="44" alt="Node.js" /><span>Node.js</span></div>
+        <div class="arsenal-item" data-category="distributed"><img src="https://skillicons.dev/icons?i=kafka" width="44" height="44" alt="Kafka" /><span>Apache Kafka</span></div>
+        <div class="arsenal-item" data-category="distributed"><img src="https://skillicons.dev/icons?i=redis" width="44" height="44" alt="Redis" /><span>Redis 7</span></div>
+        <div class="arsenal-item" data-category="distributed"><img src="https://skillicons.dev/icons?i=postgres" width="44" height="44" alt="PostgreSQL" /><span>PostgreSQL</span></div>
+        <div class="arsenal-item" data-category="distributed"><img src="https://skillicons.dev/icons?i=mongodb" width="44" height="44" alt="MongoDB" /><span>MongoDB</span></div>
+        <div class="arsenal-item" data-category="devops"><img src="https://skillicons.dev/icons?i=docker" width="44" height="44" alt="Docker" /><span>Docker</span></div>
+        <div class="arsenal-item" data-category="devops"><img src="https://skillicons.dev/icons?i=kubernetes" width="44" height="44" alt="Kubernetes" /><span>Kubernetes</span></div>
+        <div class="arsenal-item" data-category="devops"><img src="https://skillicons.dev/icons?i=git" width="44" height="44" alt="Git" /><span>Git</span></div>
+        <div class="arsenal-item" data-category="ai">
+          <svg viewBox="0 0 44 44" width="44" height="44" xmlns="http://www.w3.org/2000/svg">
+            <rect width="44" height="44" rx="10" fill="#0d1227"/>
+            <defs>
+              <linearGradient id="gem-grad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#4285f4"/>
+                <stop offset="100%" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+            <path d="M22 6 C22.4 14.5 29.5 21.6 22 22 C29.5 22.4 22.4 29.5 22 38 C21.6 29.5 14.5 22.4 22 22 C14.5 21.6 21.6 14.5 22 6Z" fill="url(#gem-grad)"/>
+          </svg>
+          <span>Gemini 2.0</span>
+        </div>
+        <div class="arsenal-item" data-category="ai">
+          <svg viewBox="0 0 44 44" width="44" height="44" xmlns="http://www.w3.org/2000/svg">
+            <rect width="44" height="44" rx="10" fill="#0a1a12"/>
+            <circle cx="11" cy="22" r="4.5" fill="none" stroke="#1dc691" stroke-width="2"/>
+            <circle cx="33" cy="22" r="4.5" fill="none" stroke="#1dc691" stroke-width="2"/>
+            <circle cx="22" cy="11" r="4.5" fill="none" stroke="#1dc691" stroke-width="2"/>
+            <circle cx="22" cy="33" r="4.5" fill="none" stroke="#f97316" stroke-width="2"/>
+            <line x1="15.5" y1="22" x2="28.5" y2="22" stroke="#1dc691" stroke-width="1.8"/>
+            <line x1="22" y1="15.5" x2="22" y2="28.5" stroke="#1dc691" stroke-width="1.8"/>
+            <circle cx="22" cy="22" r="3" fill="#1dc691"/>
+          </svg>
+          <span>LangGraph</span>
+        </div>
+        <div class="arsenal-item" data-category="design">
+          <img src="https://skillicons.dev/icons?i=figma" width="44" height="44" alt="Figma" />
+          <span>Figma</span>
+        </div>
+        <div class="arsenal-item" data-category="design">
+          <svg viewBox="0 0 44 44" width="44" height="44" xmlns="http://www.w3.org/2000/svg">
+            <rect width="44" height="44" rx="10" fill="#0f1923"/>
+            <text x="22" y="21" font-size="11" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800" letter-spacing="0">
+              <tspan fill="#4285f4">G</tspan><tspan fill="#ea4335">o</tspan><tspan fill="#fbbc05">o</tspan><tspan fill="#4285f4">g</tspan><tspan fill="#34a853">l</tspan><tspan fill="#ea4335">e</tspan>
+            </text>
+            <text x="22" y="33" font-size="10" text-anchor="middle" font-family="Inter,sans-serif" font-weight="700" fill="#ffffff">Stitch</text>
+          </svg>
+          <span>Google Stitch</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       EXPERIENCE TIMELINE
+  ============================================================ -->
+  <section id="experience" class="section section-dark" aria-label="Experience timeline">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">&gt; 05</span>
+        <h2 class="section-title">// EXPERIENCE_TIMELINE</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="timeline" role="list">
+        <div class="timeline-item" role="listitem">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-meta">
+              <span class="timeline-date">2026 — Present</span>
+              <span class="timeline-type">INTERNSHIP</span>
+            </div>
+            <h3 class="timeline-title">Software Engineering Intern</h3>
+            <p class="timeline-company">My Startup Wave</p>
+            <p class="timeline-desc">Engineering modern web &amp; AI solutions — building scalable microservices, GenAI pipelines, and production-grade full-stack applications.</p>
+          </div>
+        </div>
+        <div class="timeline-item" role="listitem">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-meta">
+              <span class="timeline-date">2026</span>
+              <span class="timeline-type award">🏆 FINALIST</span>
+            </div>
+            <h3 class="timeline-title">National Hackathon Finalist</h3>
+            <p class="timeline-company">SRIJAN 2026 · Smart India Hackathon</p>
+            <p class="timeline-desc">Built ILAP — an automated conversational RBAC Joiner-Mover-Leaver platform, achieving national finalist status in India's premier student hackathon.</p>
+          </div>
+        </div>
+        <div class="timeline-item" role="listitem">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-meta">
+              <span class="timeline-date">2026</span>
+              <span class="timeline-type">OPEN SOURCE</span>
+            </div>
+            <h3 class="timeline-title">Creator — One Swagger</h3>
+            <p class="timeline-company">VS Code Marketplace &amp; Chrome Web Store</p>
+            <p class="timeline-desc">Published a universal OpenAPI testing DevTool with a zero-CORS proxy, live on both the VS Code Marketplace and Chrome Web Store.</p>
+          </div>
+        </div>
+        <div class="timeline-item" role="listitem">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-meta">
+              <span class="timeline-date">2026</span>
+              <span class="timeline-type">PRODUCT</span>
+            </div>
+            <h3 class="timeline-title">Founder — rPrep AI</h3>
+            <p class="timeline-company">rprep-ai.vercel.app</p>
+            <p class="timeline-desc">Launched a full-stack GenAI career co-pilot with predictive interview Q&amp;As, adaptive learning pathways, and ATS resume compilation powered by Gemini 2.0 Flash.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       GITHUB TELEMETRY
+  ============================================================ -->
+  <section id="telemetry" class="section" aria-label="GitHub telemetry">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">&gt; 06</span>
+        <h2 class="section-title">// SYSTEM_TELEMETRY</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="telemetry-grid">
+        <img class="telemetry-card" src="https://github-stats-extended.vercel.app/api?username=anikethana21&show_icons=true&bg_color=000000&title_color=00ff41&text_color=86efac&icon_color=00ff41&border_color=0a3d0a&border_radius=8&count_private=true&include_all_commits=true&custom_title=System%20Stats" alt="GitHub Stats" loading="lazy" />
+        <img class="telemetry-card" src="https://github-readme-streak-stats.herokuapp.com/?user=anikethana21&background=000000&border=0a3d0a&stroke=0a3d0a&ring=00ff41&fire=39ff14&currStreakNum=86efac&currStreakLabel=00ff41&sideNums=86efac&sideLabels=00ff41&dates=22c55e&border_radius=8" alt="GitHub Streak" loading="lazy" />
+        <img class="telemetry-card telemetry-langs" src="https://github-stats-extended.vercel.app/api/top-langs/?username=anikethana21&layout=compact&bg_color=000000&title_color=00ff41&text_color=86efac&border_color=0a3d0a&border_radius=8&langs_count=8" alt="Top Languages" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT / UPLINK
+  ============================================================ -->
+  <section id="contact" class="section section-dark" aria-label="Contact uplink">
+    <div class="container container-narrow">
+      <div class="section-header">
+        <span class="section-number">&gt; 07</span>
+        <h2 class="section-title">// ESTABLISH_UPLINK</h2>
+        <div class="section-line"></div>
+      </div>
+      <p class="contact-intro">Currently open to <strong>full-time roles</strong>, <strong>internship extensions</strong>, and <strong>exciting collaborations</strong>. Let's build something that matters.</p>
+      <div class="contact-email-block">
+        <span class="contact-email-label">DIRECT UPLINK</span>
+        <div class="contact-email-row">
+          <a href="mailto:anikethana2109@gmail.com" class="contact-email-text">anikethana2109@gmail.com</a>
+          <button class="copy-btn" id="copy-email-btn" aria-label="Copy email address" data-copy="anikethana2109@gmail.com">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="contact-socials">
+        <a href="https://www.linkedin.com/in/anikethana-reddy-j-l-8716ab296/" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://github.com/anikethana21" target="_blank" rel="noopener" class="social-btn" aria-label="GitHub">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          GitHub
+        </a>
+        <a href="mailto:anikethana2109@gmail.com" class="social-btn" aria-label="Email">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+          Email
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-quote"><em>"The world only makes sense if you force it to."</em></p>
+        <p class="footer-credit">Designed &amp; built by <strong>Anikethana Reddy J L</strong> · Bengaluru, India · 2026</p>
+        <p class="footer-stack">Pure HTML5 · Vanilla CSS · Vanilla JS · No frameworks · Hand-crafted</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast" id="toast" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+  <!-- SCRIPTS -->
+  <script src="js/matrix-canvas.js" defer></script>
+  <script src="js/terminal.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

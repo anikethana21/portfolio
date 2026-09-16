@@ -1,0 +1,209 @@
+/* ============================================================
+   TERMINAL.CSS — Interactive CLI terminal styles
+   Anikethana Reddy J L — Dark Cyber-Terminal Portfolio
+============================================================ */
+
+/* ─── Terminal Wrapper ─────────────────────────────────────── */
+.terminal-wrapper {
+  border: 1px solid var(--green-dim);
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 860px;
+  margin: 0 auto;
+  background: #000;
+  box-shadow: 0 0 40px rgba(0,255,65,0.12), 0 0 80px rgba(0,255,65,0.04);
+  transition: box-shadow 0.3s ease;
+}
+
+.terminal-wrapper:focus-within {
+  box-shadow: 0 0 50px rgba(0,255,65,0.25), 0 0 100px rgba(0,255,65,0.08);
+}
+
+/* ─── Terminal Header ──────────────────────────────────────── */
+.terminal-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--surface-1);
+  border-bottom: 1px solid var(--green-dim);
+}
+
+.terminal-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.tdot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: block;
+}
+
+.tdot.red    { background: #ff5f57; }
+.tdot.yellow { background: #ffbd2e; }
+.tdot.green  { background: #28c840; }
+
+.terminal-title {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  flex: 1;
+  text-align: center;
+}
+
+.terminal-hint {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.terminal-hint code {
+  color: var(--green);
+  background: rgba(0,255,65,0.08);
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+/* ─── Terminal Body ─────────────────────────────────────────── */
+.terminal-body {
+  padding: 16px;
+  min-height: 280px;
+  max-height: 420px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--green-dim) transparent;
+}
+
+.terminal-body::-webkit-scrollbar {
+  width: 4px;
+}
+
+.terminal-body::-webkit-scrollbar-thumb {
+  background: var(--green-dim);
+  border-radius: 2px;
+}
+
+/* ─── Terminal Output Lines ────────────────────────────────── */
+.terminal-output {
+  flex: 1;
+}
+
+.t-line {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  line-height: 1.8;
+  color: var(--green-soft);
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.t-line.t-welcome {
+  color: var(--green);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.t-line.t-info { color: var(--text-muted); }
+
+.t-line.t-cmd {
+  color: var(--green);
+}
+
+.t-line.t-cmd::before {
+  content: "aniketh@portfolio:~$ ";
+  color: var(--green-dim);
+}
+
+.t-line.t-output {
+  color: var(--green-soft);
+}
+
+.t-line.t-error {
+  color: #ff4444;
+}
+
+.t-line.t-section-head {
+  color: var(--green);
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.t-cmd-hint {
+  color: var(--green);
+  font-weight: 600;
+  background: rgba(0,255,65,0.08);
+  padding: 0 3px;
+  border-radius: 2px;
+}
+
+/* ─── Terminal Input Row ───────────────────────────────────── */
+.terminal-input-row {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  gap: 0;
+}
+
+.t-prompt {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--green-dim);
+  white-space: nowrap;
+}
+
+.terminal-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--green);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  caret-color: var(--green);
+  padding: 0;
+}
+
+.terminal-input::placeholder {
+  color: rgba(0,255,65,0.25);
+}
+
+/* ─── Quick Buttons ──────────────────────────────────────────── */
+.terminal-quick-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 16px;
+  border-top: 1px solid var(--green-dim);
+  background: rgba(0,10,0,0.6);
+}
+
+.t-quick-btn {
+  background: transparent;
+  border: 1px solid var(--green-dim);
+  color: var(--green-soft);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.t-quick-btn:hover {
+  background: rgba(0,255,65,0.1);
+  border-color: var(--green);
+  color: var(--green);
+  box-shadow: 0 0 8px rgba(0,255,65,0.2);
+}
+
+.t-quick-btn:active {
+  transform: scale(0.96);
+}
+
+/* ─── Scrollbar ─────────────────────────────────────────────── */
+.terminal-output { scrollbar-width: thin; }
