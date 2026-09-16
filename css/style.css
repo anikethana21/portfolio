@@ -662,17 +662,17 @@ button { cursor: pointer; font-family: inherit; }
   transform: translateX(0) scale(1);
 }
 
-/* Inset vignette centered around face & body edges — softened on sides */
+/* Edge blending overlay for the newly vignetted photo */
 .about-photo-wrap::before {
   content: '';
   position: absolute;
   inset: 0;
   border-radius: 12px;
   background: radial-gradient(
-    ellipse 61% 60% at 50% 36%,
-    transparent 24%,
-    rgba(0, 0, 0, 0.48) 54%,
-    rgba(0, 0, 0, 0.94) 86%
+    ellipse 75% 76% at 50% 36%,
+    transparent 40%,
+    rgba(0, 0, 0, 0.35) 70%,
+    rgba(0, 0, 0, 0.95) 94%
   );
   z-index: 2;
   pointer-events: none;
@@ -682,48 +682,48 @@ button { cursor: pointer; font-family: inherit; }
   width: 100%;
   display: block;
   border-radius: 12px;
-  filter: saturate(0.55) contrast(1.15) brightness(0.87);
+  filter: saturate(0.6) contrast(1.12) brightness(0.92);
   transition: transform 0.4s ease, filter 0.4s ease;
   -webkit-mask-image: radial-gradient(
-    ellipse 77% 78% at 50% 36%,
-    black 38%,
-    rgba(0, 0, 0, 0.62) 64%,
-    transparent 88%
+    ellipse 80% 82% at 50% 36%,
+    black 46%,
+    rgba(0, 0, 0, 0.6) 72%,
+    transparent 94%
   );
   mask-image: radial-gradient(
-    ellipse 77% 78% at 50% 36%,
-    black 38%,
-    rgba(0, 0, 0, 0.62) 64%,
-    transparent 88%
+    ellipse 80% 82% at 50% 36%,
+    black 46%,
+    rgba(0, 0, 0, 0.6) 72%,
+    transparent 94%
   );
 }
 
-/* Green infrared overlay — low on face, balanced along sides and top */
+/* Green infrared overlay — rich terminal glow radiating around the face */
 .about-photo-wrap::after {
   content: '';
   position: absolute;
   inset: 0;
   border-radius: 12px;
   background: radial-gradient(
-    ellipse 61% 62% at 50% 36%,
-    rgba(0, 255, 65, 0.07) 22%,
-    rgba(0, 255, 65, 0.3) 54%,
-    rgba(0, 255, 65, 0.58) 86%
+    ellipse 68% 70% at 50% 36%,
+    rgba(0, 255, 65, 0.12) 20%,
+    rgba(0, 255, 65, 0.38) 56%,
+    rgba(0, 255, 65, 0.65) 88%
   );
   mix-blend-mode: color;
   z-index: 3;
   pointer-events: none;
   -webkit-mask-image: radial-gradient(
-    ellipse 77% 78% at 50% 36%,
-    black 38%,
-    rgba(0, 0, 0, 0.62) 64%,
-    transparent 88%
+    ellipse 80% 82% at 50% 36%,
+    black 46%,
+    rgba(0, 0, 0, 0.6) 72%,
+    transparent 94%
   );
   mask-image: radial-gradient(
-    ellipse 77% 78% at 50% 36%,
-    black 38%,
-    rgba(0, 0, 0, 0.62) 64%,
-    transparent 88%
+    ellipse 80% 82% at 50% 36%,
+    black 46%,
+    rgba(0, 0, 0, 0.6) 72%,
+    transparent 94%
   );
 }
 
