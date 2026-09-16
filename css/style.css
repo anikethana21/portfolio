@@ -662,24 +662,25 @@ button { cursor: pointer; font-family: inherit; }
   transform: translateX(0) scale(1);
 }
 
-/* Edge & vertex blending overlay — darkens the 4 corners/vertices into pure background */
+/* Edge & minimal corner overlay — clean look with only tiny pixel area at corner tips darkened */
 .about-photo-wrap::before {
   content: '';
   position: absolute;
   inset: 0;
   border-radius: 12px;
   background:
-    /* Top-left vertex */
-    radial-gradient(circle at 0% 0%, #0a0a0a 0%, rgba(10, 10, 10, 0.88) 32%, transparent 60%),
-    /* Top-right vertex */
-    radial-gradient(circle at 100% 0%, #0a0a0a 0%, rgba(10, 10, 10, 0.88) 32%, transparent 60%),
-    /* Bottom-left vertex */
-    radial-gradient(circle at 0% 100%, #0a0a0a 0%, rgba(10, 10, 10, 0.85) 28%, transparent 52%),
-    /* Bottom-right vertex */
-    radial-gradient(circle at 100% 100%, #0a0a0a 0%, rgba(10, 10, 10, 0.85) 28%, transparent 52%),
-    /* Subtle central perimeter falloff */
-    radial-gradient(ellipse 74% 75% at 50% 36%, transparent 40%, rgba(0, 0, 0, 0.35) 68%, #0a0a0a 95%);
-  box-shadow: inset 0 0 50px 18px #0a0a0a;
+    /* Tiny corner vertex tips only (18px) */
+    radial-gradient(circle 18px at 0% 0%, #0a0a0a 40%, transparent 100%),
+    radial-gradient(circle 18px at 100% 0%, #0a0a0a 40%, transparent 100%),
+    radial-gradient(circle 16px at 0% 100%, #0a0a0a 40%, transparent 100%),
+    radial-gradient(circle 16px at 100% 100%, #0a0a0a 40%, transparent 100%),
+    /* Original clean radial blend from before */
+    radial-gradient(
+      ellipse 75% 76% at 50% 36%,
+      transparent 40%,
+      rgba(0, 0, 0, 0.35) 70%,
+      rgba(0, 0, 0, 0.95) 94%
+    );
   z-index: 2;
   pointer-events: none;
 }
