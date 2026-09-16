@@ -64,44 +64,46 @@
        HERO
   ============================================================ -->
   <section id="hero" class="hero-section" aria-label="Hero introduction">
-    <div class="hero-inner">
-      <div class="hero-pretext">
-        <span class="hero-prompt">root@bengaluru:~$</span>
-        <span class="hero-cmd typing-text" id="hero-cmd">cat profile.json</span>
-        <span class="cursor-blink" aria-hidden="true"></span>
+    <div class="hero-layout">
+      <div class="hero-inner">
+        <div class="hero-pretext">
+          <span class="hero-prompt">root@bengaluru:~$</span>
+          <span class="hero-cmd typing-text" id="hero-cmd">cat profile.json</span>
+          <span class="cursor-blink" aria-hidden="true"></span>
+        </div>
+        <h1 class="hero-name">
+          <span class="hero-name-first">ANIKETHANA</span>
+          <br />
+          <span class="hero-name-last glow-text">REDDY J L</span>
+        </h1>
+        <p class="hero-tagline">
+          <span class="typewriter-text" id="hero-typewriter" aria-live="polite"></span>
+        </p>
+        <p class="hero-directive">
+          Engineering scalable distributed systems &amp; autonomous AI architectures ⚡
+        </p>
+        <div class="hero-badges">
+          <span class="hero-badge">SDE Intern @ My Startup Wave</span>
+          <span class="hero-badge">Creator of One Swagger</span>
+          <span class="hero-badge">SRIJAN 2026 National Finalist</span>
+        </div>
+        <div class="hero-ctas">
+          <a href="assets/Anikethana_Reddy_Resume.pdf" download="Anikethana_Reddy_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="hero-resume-btn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            Download Resume
+          </a>
+          <a href="#projects" class="btn btn-secondary">View Projects</a>
+          <a href="#terminal" class="btn btn-resume" id="hero-terminal-btn">
+            <span class="btn-icon">&gt;_</span> Launch Terminal
+          </a>
+          <a href="#contact" class="btn btn-ghost" id="hero-contact-btn">Establish Uplink</a>
+        </div>
       </div>
-      <h1 class="hero-name">
-        <span class="hero-name-first">ANIKETHANA</span>
-        <br />
-        <span class="hero-name-last glow-text">REDDY J L</span>
-      </h1>
-      <p class="hero-tagline">
-        <span class="typewriter-text" id="hero-typewriter" aria-live="polite"></span>
-      </p>
-      <p class="hero-directive">
-        Engineering scalable distributed systems &amp; autonomous AI architectures ⚡
-      </p>
-      <div class="hero-badges">
-        <span class="hero-badge">SDE Intern @ My Startup Wave</span>
-        <span class="hero-badge">Creator of One Swagger</span>
-        <span class="hero-badge">SRIJAN 2026 National Finalist</span>
-      </div>
-      <div class="hero-ctas">
-        <a href="assets/Anikethana_Reddy_Resume.pdf" download="Anikethana_Reddy_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="hero-resume-btn">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-            <polyline points="7 10 12 15 17 10"></polyline>
-            <line x1="12" y1="15" x2="12" y2="3"></line>
-          </svg>
-          Download Resume
-        </a>
-        <a href="#projects" class="btn btn-secondary">View Projects</a>
-        <a href="#terminal" class="btn btn-resume" id="hero-terminal-btn">
-          <span class="btn-icon">&gt;_</span> Launch Terminal
-        </a>
-        <a href="#contact" class="btn btn-ghost" id="hero-contact-btn">Establish Uplink</a>
-      </div>
-    </div>
+
     <div class="hero-scroll-hint" aria-hidden="true">
       <span class="scroll-line"></span>
       <span class="scroll-label">SCROLL</span>
@@ -119,26 +121,23 @@
         <div class="section-line"></div>
       </div>
       <div class="about-grid">
-        <div class="about-code-card glass-card">
-          <div class="code-header">
-            <span class="code-dot red"></span>
-            <span class="code-dot yellow"></span>
-            <span class="code-dot green"></span>
-            <span class="code-filename">profile.ts</span>
+        <div class="about-photo-card">
+          <div class="about-photo-wrap" id="about-photo-wrap">
+            <img
+              src="assets/anikethana.jpg"
+              alt="Anikethana Reddy J L"
+              class="about-photo"
+              id="about-photo"
+              loading="eager"
+            />
           </div>
-          <pre class="code-block"><code><span class="kw">const</span> <span class="var">aniketh</span> <span class="op">=</span> {
-  <span class="key">identity</span>: <span class="str">"Anikethana Reddy J L"</span>,
-  <span class="key">location</span>: <span class="str">"Bengaluru, India"</span>,
-  <span class="key">role</span>: <span class="str">"SDE Intern @ My Startup Wave"</span>,
-  <span class="key">designations</span>: [
-    <span class="str">"Distributed Systems Engineer"</span>,
-    <span class="str">"GenAI Architect"</span>,
-    <span class="str">"DevTools Creator"</span>,
-    <span class="str">"UI/UX Engineer"</span>
-  ],
-  <span class="key">directive</span>: <span class="str">"Engineer scalable distributed
-    systems &amp; autonomous AI architectures ⚡"</span>
-};</code></pre>
+          <div class="about-photo-meta">
+            <span class="about-photo-name">ANIKETHANA<span class="about-photo-dot"> ·</span></span>
+            <span class="about-photo-status">
+              <span class="status-dot" aria-hidden="true" style="width:6px;height:6px;display:inline-block;"></span>
+              AVAILABLE
+            </span>
+          </div>
         </div>
         <div class="about-text">
           <p class="about-intro">Full-Stack Engineer from Bengaluru who builds systems that <span class="highlight">scale under pressure</span> and <span class="highlight">interfaces humans love</span>.</p>
@@ -152,9 +151,8 @@
           </ul>
           <div class="about-connect">
             <a href="assets/Anikethana_Reddy_Resume.pdf" target="_blank" rel="noopener noreferrer" class="about-link highlight-link">📄 View Resume (PDF)</a>
-            <a href="assets/Anikethana_Reddy_Resume.pdf" download="Anikethana_Reddy_Resume.pdf" class="about-link">⬇️ Download</a>
             <a href="mailto:anikethana2109@gmail.com" class="about-link">anikethana2109@gmail.com</a>
-            <a href="https://www.linkedin.com/in/anikethana-reddy-j-l-8716ab296/" target="_blank" rel="noopener" class="about-link">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/anikethana-reddy-j-l-8716ab296/" target="_blank" rel="noopener noreferrer" class="about-link">LinkedIn</a>
             <a href="https://github.com/anikethana21" target="_blank" rel="noopener" class="about-link">GitHub</a>
           </div>
         </div>

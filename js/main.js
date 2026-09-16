@@ -224,3 +224,22 @@ console.log(
   '%c> anikethana2109@gmail.com',
   'color:#86efac;font-family:monospace;font-size:11px;',
 );
+
+/* ── WHOAMI Photo scroll-reveal animation ────────────────────── */
+(function initPhotoReveal() {
+  const wrap = document.getElementById('about-photo-wrap');
+  if (!wrap) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          wrap.classList.add('photo-visible');
+          observer.unobserve(wrap); // only once
+        }
+      });
+    },
+    { threshold: 0.25 }
+  );
+  observer.observe(wrap);
+})();

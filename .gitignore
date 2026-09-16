@@ -1,0 +1,5 @@
+.vercel
+node_modules
+serve.ps1
+.DS_Store
+Thumbs.db

@@ -208,6 +208,7 @@ button { cursor: pointer; font-family: inherit; }
   text-decoration: none;
   letter-spacing: 0.05em;
   transition: text-shadow var(--transition);
+  margin-left: 25px;
 }
 
 .nav-logo:hover { text-shadow: 0 0 12px rgba(0,255,65,0.6); color: var(--green); }
@@ -220,6 +221,8 @@ button { cursor: pointer; font-family: inherit; }
   gap: 4px;
   flex: 1;
   justify-content: center;
+  padding-left: 0;
+  padding-right: 400px;
 }
 
 .nav-link {
@@ -321,7 +324,6 @@ button { cursor: pointer; font-family: inherit; }
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
   padding: 80px clamp(20px, 3vw, 40px) 60px;
   max-width: var(--container-max);
   margin: 0 auto;
@@ -329,9 +331,102 @@ button { cursor: pointer; font-family: inherit; }
   z-index: 10;
 }
 
-.hero-inner {
-  max-width: 800px;
+/* 2-column layout: kept as single col now photo removed */
+.hero-layout {
+  width: 100%;
 }
+
+.hero-inner {
+  max-width: 680px;
+}
+
+/* ── Floating photo column ── */
+.hero-photo-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.hero-photo-float {
+  position: relative;
+  width: 320px;
+  height: 420px;
+  animation: hero-photo-enter 1.2s ease-out 0.4s forwards;
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+}
+
+@keyframes hero-photo-enter {
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.hero-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+  /* desaturate slightly to blend with dark theme */
+  filter: saturate(0.65) contrast(1.08) brightness(0.92);
+  /* fade edges into the dark background */
+  -webkit-mask-image: radial-gradient(
+    ellipse 85% 90% at 50% 48%,
+    black 45%,
+    transparent 90%
+  );
+  mask-image: radial-gradient(
+    ellipse 85% 90% at 50% 48%,
+    black 45%,
+    transparent 90%
+  );
+}
+
+/* Green infrared color overlay — blends without hiding face */
+.hero-photo-float::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  background: rgba(0, 255, 65, 0.10);
+  mix-blend-mode: color;
+  pointer-events: none;
+  -webkit-mask-image: radial-gradient(
+    ellipse 85% 90% at 50% 48%,
+    black 45%,
+    transparent 90%
+  );
+  mask-image: radial-gradient(
+    ellipse 85% 90% at 50% 48%,
+    black 45%,
+    transparent 90%
+  );
+}
+
+.hero-photo-float:hover .hero-photo-img {
+  transform: scale(1.03) translateY(-4px);
+  filter: saturate(0.8) contrast(1.1) brightness(0.96);
+}
+
+/* animated green glow ring behind the photo */
+.hero-photo-glow {
+  position: absolute;
+  inset: -20px;
+  border-radius: 20px;
+  background: radial-gradient(ellipse at center, rgba(0,255,65,0.10) 0%, transparent 65%);
+  animation: photo-pulse 4s ease-in-out infinite;
+  z-index: -1;
+  pointer-events: none;
+}
+
+@keyframes photo-pulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50%       { opacity: 1;   transform: scale(1.05); }
+}
+
+
 
 .hero-pretext {
   display: flex;
@@ -540,6 +635,124 @@ button { cursor: pointer; font-family: inherit; }
   overflow: hidden;
   font-size: 0.82rem;
 }
+
+/* ─── ABOUT PHOTO CARD ───────────────────────────────────────── */
+.about-photo-card {
+  padding: 0;
+  background: transparent;
+  border: none;
+  position: relative;
+  width: fit-content;
+  user-select: none;
+  cursor: default;
+}
+
+.about-photo-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+  /* smooth scroll-fade animation — toggled by JS */
+  opacity: 0;
+  transform: translateX(-20px) scale(0.96);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.about-photo-wrap.photo-visible {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+
+/* Inset vignette around body edges */
+.about-photo-wrap::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  box-shadow: inset 0 0 90px 45px rgba(0, 0, 0, 0.92);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.about-photo {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  filter: saturate(0.5) contrast(1.15) brightness(0.85);
+  transition: transform 0.4s ease, filter 0.4s ease;
+  -webkit-mask-image: radial-gradient(
+    ellipse 75% 80% at 50% 58%,
+    black 25%,
+    rgba(0,0,0,0.5) 50%,
+    transparent 72%
+  );
+  mask-image: radial-gradient(
+    ellipse 75% 80% at 50% 58%,
+    black 25%,
+    rgba(0,0,0,0.5) 50%,
+    transparent 72%
+  );
+}
+
+/* Green infrared overlay — stronger cast */
+.about-photo-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  background: rgba(0, 255, 65, 0.28);
+  mix-blend-mode: color;
+  pointer-events: none;
+  -webkit-mask-image: radial-gradient(
+    ellipse 75% 80% at 50% 58%,
+    black 25%,
+    rgba(0,0,0,0.5) 50%,
+    transparent 72%
+  );
+  mask-image: radial-gradient(
+    ellipse 75% 80% at 50% 58%,
+    black 25%,
+    rgba(0,0,0,0.5) 50%,
+    transparent 72%
+  );
+}
+
+.about-photo-card:hover .about-photo {
+  transform: scale(1.03) translateY(-4px);
+  filter: saturate(0.65) contrast(1.12) brightness(0.9);
+}
+
+
+
+
+/* meta bar */
+.about-photo-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 4px;
+  max-width: 280px;
+}
+
+.about-photo-name {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-bright);
+  letter-spacing: 0.1em;
+}
+
+.about-photo-dot { color: var(--green); }
+
+.about-photo-status {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--green);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  letter-spacing: 0.08em;
+}
+
 
 .code-header {
   display: flex;
@@ -1293,6 +1506,10 @@ button { cursor: pointer; font-family: inherit; }
 @media (max-width: 900px) {
   .about-grid {
     grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .about-photo-card {
+    margin: 0 auto;
   }
   .design-grid {
     grid-template-columns: 1fr 1fr;
@@ -1303,6 +1520,12 @@ button { cursor: pointer; font-family: inherit; }
 }
 
 @media (max-width: 768px) {
+  .hero-layout {
+    grid-template-columns: 1fr;
+  }
+  .hero-photo-col {
+    display: none;
+  }
   .nav-links,
   .nav-status,
   .nav-actions {
@@ -1353,8 +1576,45 @@ button { cursor: pointer; font-family: inherit; }
 }
 
 @media (max-width: 480px) {
-  .hero-ctas { flex-direction: column; }
+  /* Reset desktop-only nav positioning */
+  .nav-logo { margin-left: 0; }
+
+  /* Hero name smaller on tiny screens */
+  .hero-name { font-size: clamp(2rem, 11vw, 3.5rem); }
+
+  /* Stack hero CTA buttons full-width */
+  .hero-ctas {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-ctas .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 20px;
+  }
+
+  /* Badges wrap cleanly */
   .hero-badge { font-size: 0.65rem; }
+
+  /* Contact */
   .contact-email-text { font-size: 1rem; }
   .section-title { font-size: 0.85rem; }
+
+  /* About connect links wrap */
+  .about-connect { flex-direction: column; gap: 10px; }
+  .about-link.highlight-link { text-align: center; }
+
+  /* Terminal quick buttons wrap */
+  .terminal-quick-btns { flex-wrap: wrap; }
+
+  /* Timeline tighter */
+  .timeline { padding-left: 16px; }
+}
+
+/* ─── TABLET (600-768px) ────────────────────────────────────── */
+@media (max-width: 640px) {
+  .nav-logo { margin-left: 0; }
+  .nav-links { padding-right: 0; }
+  .hero-badges { gap: 6px; }
+  .contact-socials { flex-wrap: wrap; gap: 8px; }
 }
