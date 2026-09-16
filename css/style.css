@@ -662,7 +662,7 @@ button { cursor: pointer; font-family: inherit; }
   transform: translateX(0) scale(1);
 }
 
-/* Edge & minimal corner overlay — clean look with only tiny pixel area at corner tips darkened */
+/* Edge & corner overlay — corner vertices + surrounding vignette ring in same #0a0a0a color */
 .about-photo-wrap::before {
   content: '';
   position: absolute;
@@ -674,13 +674,14 @@ button { cursor: pointer; font-family: inherit; }
     radial-gradient(circle 44px at 100% 0%, #000000 0%, #0a0a0a 80%, rgba(10, 10, 10, 0.7) 90%, transparent 100%),
     radial-gradient(circle 38px at 0% 100%, #000000 0%, #0a0a0a 75%, rgba(10, 10, 10, 0.7) 88%, transparent 100%),
     radial-gradient(circle 38px at 100% 100%, #000000 0%, #0a0a0a 75%, rgba(10, 10, 10, 0.7) 88%, transparent 100%),
-    /* Original clean radial blend from before */
+    /* Surrounding vignette ring with the same #0a0a0a color all around */
     radial-gradient(
-      ellipse 75% 76% at 50% 36%,
-      transparent 40%,
-      rgba(0, 0, 0, 0.35) 70%,
-      rgba(0, 0, 0, 0.95) 94%
+      ellipse 66% 68% at 50% 36%,
+      transparent 32%,
+      rgba(10, 10, 10, 0.45) 58%,
+      #0a0a0a 92%
     );
+  box-shadow: inset 0 0 30px 10px #0a0a0a;
   z-index: 2;
   pointer-events: none;
 }
