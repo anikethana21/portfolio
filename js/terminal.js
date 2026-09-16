@@ -268,18 +268,14 @@
 
   /* ── Click-to-focus ────────────────────────────────────── */
   document.getElementById('terminal-body')?.addEventListener('click', () => {
-    inputEl.focus();
+    inputEl.focus({ preventScroll: true });
   });
 
-  /* ── Auto-focus on reaching terminal section ────────────── */
-  const termSection = document.getElementById('terminal');
-  if (termSection && 'IntersectionObserver' in window) {
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) inputEl.focus();
-      });
-    }, { threshold: 0.4 });
-    io.observe(termSection);
-  }
+  /* ── Focus when clicking Launch Terminal CTA ───────────── */
+  document.getElementById('hero-terminal-btn')?.addEventListener('click', () => {
+    setTimeout(() => {
+      inputEl.focus({ preventScroll: true });
+    }, 600);
+  });
 
 })();
