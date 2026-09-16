@@ -662,18 +662,24 @@ button { cursor: pointer; font-family: inherit; }
   transform: translateX(0) scale(1);
 }
 
-/* Edge blending overlay for the newly vignetted photo */
+/* Edge & vertex blending overlay — darkens the 4 corners/vertices into pure background */
 .about-photo-wrap::before {
   content: '';
   position: absolute;
   inset: 0;
   border-radius: 12px;
-  background: radial-gradient(
-    ellipse 75% 76% at 50% 36%,
-    transparent 40%,
-    rgba(0, 0, 0, 0.35) 70%,
-    rgba(0, 0, 0, 0.95) 94%
-  );
+  background:
+    /* Top-left vertex */
+    radial-gradient(circle at 0% 0%, #0a0a0a 0%, rgba(10, 10, 10, 0.88) 32%, transparent 60%),
+    /* Top-right vertex */
+    radial-gradient(circle at 100% 0%, #0a0a0a 0%, rgba(10, 10, 10, 0.88) 32%, transparent 60%),
+    /* Bottom-left vertex */
+    radial-gradient(circle at 0% 100%, #0a0a0a 0%, rgba(10, 10, 10, 0.85) 28%, transparent 52%),
+    /* Bottom-right vertex */
+    radial-gradient(circle at 100% 100%, #0a0a0a 0%, rgba(10, 10, 10, 0.85) 28%, transparent 52%),
+    /* Subtle central perimeter falloff */
+    radial-gradient(ellipse 74% 75% at 50% 36%, transparent 40%, rgba(0, 0, 0, 0.35) 68%, #0a0a0a 95%);
+  box-shadow: inset 0 0 50px 18px #0a0a0a;
   z-index: 2;
   pointer-events: none;
 }
