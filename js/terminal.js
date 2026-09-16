@@ -18,6 +18,7 @@
     help() {
       printSection('AVAILABLE COMMANDS');
       printLine('  whoami      — identity matrix');
+      printLine('  resume      — access & view official resume PDF');
       printLine('  skills      — tech stack manifest');
       printLine('  projects    — project index');
       printLine('  experience  — timeline log');
@@ -150,6 +151,25 @@
         printLine('  2 packets transmitted, 2 received, 0% packet loss');
         printLine('  Round-trip avg: 0.040 ms · Connection: ESTABLISHED');
       }, 900);
+    },
+
+    resume() {
+      printSection('CURRICULUM VITAE / OFFICIAL RESUME');
+      printLine('  Candidate   : Anikethana Reddy J L');
+      printLine('  Role        : Software Engineering Intern @ MyStartupWave');
+      printLine('  Education   : M. S. Ramaiah Univ of Applied Sciences (B.Tech CSE, 8.75 CGPA)');
+      printLine('  Projects    : One Swagger, RPrep, Shortly, Multi-Agent Research Pipeline');
+      printLine('  Stack       : Python, FastAPI, Node.js, Express, Kafka, Redis, Docker, K8s');
+      printLine('  File        : assets/Anikethana_Reddy_Resume.pdf [132 KB]');
+      printLine('');
+      printLine('  Opening official PDF document in browser...');
+      setTimeout(() => {
+        window.open('assets/Anikethana_Reddy_Resume.pdf', '_blank', 'noopener');
+      }, 500);
+    },
+
+    cv() {
+      COMMANDS.resume();
     },
   };
 

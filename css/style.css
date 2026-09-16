@@ -243,6 +243,42 @@ button { cursor: pointer; font-family: inherit; }
   box-shadow: 0 0 8px rgba(0,255,65,0.12);
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+}
+
+.nav-resume-btn {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--green);
+  background: rgba(0, 255, 65, 0.08);
+  border: 1px solid var(--green-dim);
+  border-radius: var(--radius-sm);
+  padding: 5px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+.nav-resume-btn:hover {
+  background: var(--green);
+  color: #000;
+  box-shadow: 0 0 14px rgba(0, 255, 65, 0.4);
+  border-color: var(--green);
+  transform: translateY(-1px);
+}
+
+.nav-link-resume {
+  color: var(--green) !important;
+  font-weight: 600;
+}
+
 .nav-status {
   display: flex;
   align-items: center;
@@ -444,6 +480,24 @@ button { cursor: pointer; font-family: inherit; }
   transform: translateY(-2px);
 }
 
+.btn-resume {
+  background: rgba(0, 255, 65, 0.08);
+  color: var(--green);
+  border-color: var(--green-dim);
+  box-shadow: 0 0 12px rgba(0, 255, 65, 0.15);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-resume:hover {
+  background: var(--green);
+  color: #000;
+  border-color: var(--green);
+  box-shadow: 0 0 24px rgba(0, 255, 65, 0.45);
+  transform: translateY(-2px);
+}
+
 .btn-icon {
   font-size: 1.1em;
   line-height: 1;
@@ -577,6 +631,25 @@ button { cursor: pointer; font-family: inherit; }
   border-color: var(--green);
   text-shadow: 0 0 8px rgba(0,255,65,0.4);
   color: var(--green);
+}
+
+.about-link.highlight-link {
+  color: #000 !important;
+  background: var(--green);
+  border: 1px solid var(--green);
+  padding: 4px 12px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  box-shadow: 0 0 12px rgba(0, 255, 65, 0.25);
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.about-link.highlight-link:hover {
+  background: #00cc34;
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.45);
+  transform: translateY(-1px);
+  color: #000 !important;
 }
 
 /* ─── PROJECTS ──────────────────────────────────────────────── */
@@ -1233,7 +1306,8 @@ button { cursor: pointer; font-family: inherit; }
 
 @media (max-width: 768px) {
   .nav-links,
-  .nav-status {
+  .nav-status,
+  .nav-actions {
     display: none;
   }
   .nav-hamburger { display: flex; }
