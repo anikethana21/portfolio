@@ -662,17 +662,17 @@ button { cursor: pointer; font-family: inherit; }
   transform: translateX(0) scale(1);
 }
 
-/* Inset vignette centered around face & body edges */
+/* Inset vignette centered around face & body edges — tightened on sides & top */
 .about-photo-wrap::before {
   content: '';
   position: absolute;
   inset: 0;
   border-radius: 12px;
   background: radial-gradient(
-    ellipse 68% 70% at 50% 36%,
-    transparent 30%,
-    rgba(0, 0, 0, 0.42) 58%,
-    rgba(0, 0, 0, 0.92) 92%
+    ellipse 52% 60% at 50% 36%,
+    transparent 20%,
+    rgba(0, 0, 0, 0.58) 48%,
+    rgba(0, 0, 0, 0.96) 82%
   );
   z-index: 2;
   pointer-events: none;
@@ -682,48 +682,48 @@ button { cursor: pointer; font-family: inherit; }
   width: 100%;
   display: block;
   border-radius: 12px;
-  filter: saturate(0.55) contrast(1.14) brightness(0.88);
+  filter: saturate(0.55) contrast(1.15) brightness(0.86);
   transition: transform 0.4s ease, filter 0.4s ease;
   -webkit-mask-image: radial-gradient(
-    ellipse 82% 86% at 50% 36%,
-    black 42%,
-    rgba(0, 0, 0, 0.65) 68%,
-    transparent 92%
+    ellipse 72% 78% at 50% 36%,
+    black 34%,
+    rgba(0, 0, 0, 0.6) 58%,
+    transparent 84%
   );
   mask-image: radial-gradient(
-    ellipse 82% 86% at 50% 36%,
-    black 42%,
-    rgba(0, 0, 0, 0.65) 68%,
-    transparent 92%
+    ellipse 72% 78% at 50% 36%,
+    black 34%,
+    rgba(0, 0, 0, 0.6) 58%,
+    transparent 84%
   );
 }
 
-/* Green infrared overlay — low on face (36%), radiating outward around borders */
+/* Green infrared overlay — low on face, stronger along sides, top, and borders */
 .about-photo-wrap::after {
   content: '';
   position: absolute;
   inset: 0;
   border-radius: 12px;
   background: radial-gradient(
-    ellipse 68% 72% at 50% 36%,
-    rgba(0, 255, 65, 0.08) 25%,
-    rgba(0, 255, 65, 0.3) 60%,
-    rgba(0, 255, 65, 0.55) 90%
+    ellipse 54% 62% at 50% 36%,
+    rgba(0, 255, 65, 0.07) 20%,
+    rgba(0, 255, 65, 0.32) 50%,
+    rgba(0, 255, 65, 0.6) 82%
   );
   mix-blend-mode: color;
   z-index: 3;
   pointer-events: none;
   -webkit-mask-image: radial-gradient(
-    ellipse 82% 86% at 50% 36%,
-    black 42%,
-    rgba(0, 0, 0, 0.65) 68%,
-    transparent 92%
+    ellipse 72% 78% at 50% 36%,
+    black 34%,
+    rgba(0, 0, 0, 0.6) 58%,
+    transparent 84%
   );
   mask-image: radial-gradient(
-    ellipse 82% 86% at 50% 36%,
-    black 42%,
-    rgba(0, 0, 0, 0.65) 68%,
-    transparent 92%
+    ellipse 72% 78% at 50% 36%,
+    black 34%,
+    rgba(0, 0, 0, 0.6) 58%,
+    transparent 84%
   );
 }
 
